@@ -1,0 +1,75 @@
+Contexte : 
+
+    - Client : Association de Parents d’Elèves d’Alsace
+
+    - Ecoles : informations détaillées sur les écoles comme le
+    nombre de classes, le niveau correspondant à une classe, les effectifs des classes, les coordonnées des écoles,
+    représentant des mairies, etc… (voir pdf exemple moodle)
+
+    - Objectif : site internet dédié devra permettre à chaque référent local d’école de saisir en ligne les informations propres à une
+    école.
+    Le site devra permettre d’afficher par école toutes les informations disponibles.
+
+
+To Do :
+
+    1 - Les différents responsables d’écoles doivent être connectés avant de pouvoir saisir ou modifier des
+    informations : Page de connexion avec utilisateurs
+
+    2 - Un responsable local ne peut saisir des informations que pour une école dont il a la charge :  utilisateurs avec des droits specifiques
+
+    3 - Le secrétaire de l’association peut saisir ou modifier des informations de n’importe quelle école : secretaire sera une utilisatrice "admin" avec
+    tout les droits de modifications et consultation
+
+    4 - On doit pouvoir retracer l’historique des saisies. Qui a saisi ou modifié une information et quand cela a été réalisé : une table "Historique" dans la bbd
+
+
+Idées de réalisation : 
+
+    Pour la 1 - Table "Utilisateur" dans la BDD (Respectant le RGPD) : Etat ✔ (Repris de la mission 9)
+
+    Pour la 2 - Implementation de la table "Droits" avec clé etrangere dans "Utilisateurs" où les droits seront representés avec des booléens : Etat ✗ (A implementer)
+
+    Pour la 3 - Création d'une utilisatrice "secretaire" avec tout les droits // Ou bien créer un droit specifique dans la table droits appelé "secretaire" donnant tout les droits
+                qui sera pas utile dans notre contexte mais selon une idée d'evolutivité de l'application et son utilisation dans d'autre ecoles : Etat ✗ (A implementer)
+
+    Pour la 4 - Implementation d'une table "Historique" qui retrace tout l'historique (Modelisation des colonnes de la table a reflechir) : Etat ✗ (A implementer)
+
+    - Charte graphique a effectuer avec une page modele dans un premier temps qui sera repris sur tout les autres pages du site : Etat ✗ (On garde le modele actuel ?)
+
+
+
+
+
+A faire selon le sujet du projet disponible dans moodle : 
+
+    - 1. Créer une structure de site Web avec une identité propre au projet (logo, charte, graphique, maquettage du site,
+         architecture du site) : Etat ✗ (A implementer)
+         Marouane
+
+    - 2. Créer les pages statiques du site (page d’accueil, page expliquant la finalité du projet, partenaires du projet,
+         données règlementaires) : Etat ✗ (A implementer)
+         Davud
+
+    - 3. Stocker les données déjà collectées et les intégrer dans une base de données (modélisation de la base de
+         données, création de la base, création et alimentation des tables) : Etat ✗ (A implementer)
+         Isamet
+
+    - 4. Créer une page spécifique pour rendre ces données disponibles en accès public sur le site : Etat ✗ (A implementer)
+         Isamet
+
+    - 5. Créer un espace sécurisé d’administration des données en ligne (après authentification) dédié au secrétaire
+         général (ou à un autre administrateur du site) permettant de modifier les informations de n’importe quelle école : Etat ✗ (A implementer)
+         Matthieu
+
+    - 6. Créer un espace sécurisé d’administration des données en ligne (après authentification) dédié à chaque référent
+         local permettant de modifier uniquement les informations de l’école à laquelle il est rattaché : Etat ✗ (A implementer)
+         Matthieu
+
+
+
+
+
+         TABLES AJOUTES:
+
+         DANS ETABLISSEMENT: DERNIERE MODIFICATION
